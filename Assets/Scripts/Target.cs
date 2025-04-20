@@ -59,7 +59,6 @@ public class Target : MonoBehaviour
         {
             float currentTime = Mathf.Clamp01(timePassed / timeAmount);
             float visibility = Mathf.Lerp(1, 0, currentTime);
-            Debug.Log(visibility);
             sr.material.SetFloat("_Visibility", visibility);
             timePassed += Time.deltaTime;
             rb.drag += Time.deltaTime * 10;
@@ -67,6 +66,5 @@ public class Target : MonoBehaviour
         }
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
-        Debug.Log("Dead!");
     }
 }
