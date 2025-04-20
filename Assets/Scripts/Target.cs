@@ -54,6 +54,7 @@ public class Target : MonoBehaviour
 
     private IEnumerator OnDeath(float timeAmount)
     {
+        sr.material.SetFloat("_Noise_Scale", Random.Range(15, 20));
         float timePassed = 0;
         while(timeAmount > timePassed)
         {
@@ -62,6 +63,7 @@ public class Target : MonoBehaviour
             sr.material.SetFloat("_Visibility", visibility);
             timePassed += Time.deltaTime;
             rb.drag += Time.deltaTime * 10;
+            transform.localScale *= 0.999f;
             yield return null;
         }
         yield return new WaitForSeconds(0.1f);

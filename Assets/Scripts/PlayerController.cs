@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
             if(hitObject.TryGetComponent(out Target target))
             {
                 target.OnHit();
-                Debug.Log("Hit!");
             }
         }
     }
