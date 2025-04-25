@@ -5,16 +5,27 @@ public class Inventory : MonoBehaviour
 {
     public Dictionary<ItemTypes, string> store = new();
 
+        [SerializeField] private ItemData[] testItems;
+    [SerializeField] private InventoryPanel panel;
+
+
     void Start()
     {
         AddItem();
         LogStore();
+        foreach(var item in testItems)
+        {
+            panel.AddItem(item);
+        }
     }
 
-    
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            var isActive = panel.gameObject.activeInHierarchy;
+            panel.gameObject.SetActive(!isActive);
+        }
     }
 
     private void AddItem()

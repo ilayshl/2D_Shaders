@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a542cb33648b24907b0b48827902f7dd, type: 3}
+  m_Name: IonCannon
+  m_EditorClassIdentifier: 
+  itemName: Ion Cannon
+  icon: {fileID: 21300000, guid: 596e63311d0834ce1bc2479ca7a8c708, type: 3}
+  prefab: {fileID: 3121473554528978660, guid: 4f3af0662524f494c869391f31fa5aee, type: 3}
