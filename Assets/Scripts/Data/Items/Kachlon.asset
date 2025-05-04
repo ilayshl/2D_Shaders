@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Kachlon
   icon: {fileID: 21300000, guid: 5c887233ce3c04745a49c741537c2e5d, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 771209286035281254, guid: b223474e94e6046f883884d7323cc5ae, type: 3}

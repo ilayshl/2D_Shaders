@@ -4,8 +4,12 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField] private float deathTimer;
-    [SerializeField] private Sprite[] targetSprite;
+    //[SerializeField] private Sprite[] targetSprite;
     [SerializeField] private Material dissolveMaterial;
+    [SerializeField] private AudioClip sound;
+    [SerializeField] private ItemData correspondingItem;
+    public ItemData item {get => correspondingItem;}
+
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -18,7 +22,7 @@ public class Target : MonoBehaviour
 
     void Start()
     {
-        sr.sprite = targetSprite[Random.Range(0, targetSprite.Length)];
+        //sr.sprite = targetSprite[Random.Range(0, targetSprite.Length)];
         transform.localScale*=Randomize(0.7f, 1.2f);
         rb.AddForce(SetVelocity(), ForceMode2D.Impulse);
         rb.AddTorque(Randomize(-1, 1), ForceMode2D.Impulse);

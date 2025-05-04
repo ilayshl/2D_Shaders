@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public GameState state {get; private set;}
     [SerializeField] private UIManager uiManager;
     [SerializeField] private SpawnerManager spawnerManager;
+    [SerializeField] private InventoryPanel panel;
 
     private void Awake()
     {
@@ -16,6 +17,17 @@ public class GameManager : MonoBehaviour
         else
         {
             Instance = this;
+        }
+    }
+
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            var isActive = panel.gameObject.activeInHierarchy;
+            panel.gameObject.SetActive(!isActive);
+            spawnerManager.HandleStateChange(panel.gameObject.activeInHierarchy);
         }
     }
 

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Moonool
   icon: {fileID: 21300000, guid: 8758bebf8fb89154f80a9f576c60031c, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 771209286035281254, guid: 0206d74b4d39f419da91c4aa57baa727, type: 3}

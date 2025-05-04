@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ilay
   icon: {fileID: 21300000, guid: 8a3416e34dde60349be3e4b3b791d491, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 771209286035281254, guid: 5f85e329faffe4dc79e443baf7e54432, type: 3}

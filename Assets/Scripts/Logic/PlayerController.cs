@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private Inventory inventoryManager;
     [SerializeField] LayerMask targetLayer;
     Vector2 mousePosition;
     
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
             if(hitObject.TryGetComponent(out Target target))
             {
                 target.OnHit();
+                inventoryManager.AddItem(target.item);
             }
         }
     }
