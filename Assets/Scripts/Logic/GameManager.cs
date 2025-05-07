@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            var isActive = panel.gameObject.activeInHierarchy;
-            panel.gameObject.SetActive(!isActive);
-            spawnerManager.HandleStateChange(panel.gameObject.activeInHierarchy);
+            var isActive = panel.isActive;
+            panel.SetActive(!isActive);
+            spawnerManager.HandleStateChange(isActive);
         }
     }
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         switch(newState)
         {
             case GameState.Active:
-
+            
             break;
             case GameState.Inventory:
 

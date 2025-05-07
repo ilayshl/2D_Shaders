@@ -4,8 +4,17 @@ using UnityEngine.UI;
 
 public class InventoryPanel : MonoBehaviour
 {
+    public bool isActive = false;
     [SerializeField] private Inventory inventoryManager;
+    [SerializeField] private RectTransform itemsHolder;
     [SerializeField] private GameObject inventoryEntryPrefab;
+
+    private Animator animator;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void OnEnable()
     {
@@ -17,19 +26,25 @@ public class InventoryPanel : MonoBehaviour
         RemoveItemsFromUI();
     }
 
-    private void InitiateItemsToUI()
+    public void SetActive(bool value)
+    {
+        animator.SetBool("isActive", value);
+        isActive = !isActive;
+    }
+
+    public void InitiateItemsToUI()
     {
         foreach(var item in inventoryManager.inventory)
         {
-            var entry = Instantiate(inventoryEntryPrefab, this.transform);
+            var entry = Instantiate(inventoryEntryPrefab, itemsHolder);
             entry.GetComponent<Image>().sprite = item.Key.Icon;
             entry.GetComponentInChildren<TextMeshProUGUI>().text = item.Value.ToString();
         }
     }
 
-    private void RemoveItemsFromUI()
+    public void RemoveItemsFromUI()
     {
-        foreach(Transform item in transform)
+        foreach(Transform item in itemsHolder.transform)
         {
             Destroy(item.gameObject);
         }

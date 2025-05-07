@@ -35,7 +35,7 @@ public class SpawnerManager : MonoBehaviour
 
     public void HandleStateChange(bool isPaused)
     {
-        if (isPaused)
+        if (!isPaused)
         {
             StopSpawning();
         }
