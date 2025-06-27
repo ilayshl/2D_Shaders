@@ -16,15 +16,15 @@ public class InventoryPanel : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void OnEnable()
+    /* private void OnEnable()
     {
         InitiateItemsToUI();
-        inventoryManager.LogInventory();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         RemoveItemsFromUI();
-    }
+    } */
 
     public void SetActive(bool value)
     {

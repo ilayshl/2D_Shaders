@@ -11,12 +11,10 @@ public class Inventory : MonoBehaviour
         if(_inventory.ContainsKey(item))
         {
             _inventory[item]++;
-            Debug.Log(_inventory[item]+ " was updated to be " + _inventory[item] + ".");
         }
         else
         {
             _inventory[item] = 1;
-            Debug.Log(_inventory[item]+ " was added to the inventory.");
         }
     }
     
